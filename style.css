@@ -67,12 +67,13 @@ margin: 12px 64px 12px 12px;
 	right: 16px;
 }*/
 body > header > details ul {
+	position: relative;
 	display:flex;
 	list-style-type: none;
 	width: 100%;
 	padding: 0px;
 	background:rgba(0,0,0, 0.05);
-
+/*	top: -48px;*/
 }
 body > header > details ul li {
 	display:inline-block;
@@ -81,27 +82,40 @@ body > header > details ul li {
 	padding: 12px;
 }
 
+details > summary {
+/*	font-size: xx-large;*/
+}
+details li:first-child {
+	
+}
 body > header > details > summary {
+	position:relative;
 /*	display:inline-block;*/
   text-align: center;
   list-style-type: "⋮";
+
   font-size: x-large;
 /*  background:gray;*/
   
   padding: 4px 6px;
 /*  width: 8px;*/
     float: right;
-  margin-right: 16px;
+  margin-right: 24px;
+
 }
 
 body > header > details[open] summary {
 	background:rgba(0,0,0, 0.05);
-  list-style-type: "✕";
-  font-size: initial;
+/*  list-style-type: "△";*/
+list-style-type: "<";
+  transform: rotate(90deg);
+  font-size: xx-large;
   margin-right: initial;
+  margin-right: 16px;
+/*  top:-60px;*/
 }
 /*body > header > details[open] {
-  display: flex; "⋯"
+  display: flex; "⋯" △ ✕"
   flex-flow: row-reverse;
 }*/
 body > main {
@@ -156,12 +170,13 @@ body > footer > section {
 }
 body > nav > details > summary {
 /*list-style-type: "☰";*/
-	font-size:x-large;
+	font-size:xx-large;
 	padding: 16px 16px 0px 16px;
 }
 
-body > nav > details[open] > summary {
+body > nav > details[open] > summary:after {
 /*list-style-type: "✕";*/
+/*content:"test";*/
 }
 body > nav > details > summary[closed] {
 
@@ -212,6 +227,17 @@ details > summary[open] {
 /*		list-style-type: "⌃";*/
 		list-style-type: none;
 	}
+body > header > details > summary {
+	margin-right: 64px;
+    top: -52px;	
+}
+body > header > details[open] > summary {
+/*	margin-right: 64px;
+    top: -52px;	*/
+    top: -56px;
+    margin-right: 64px;
+}
+
 body > nav > details > summary {
 list-style-type: "☰";
 }
@@ -282,6 +308,10 @@ list-style-type: "✕";
 	body > aside > details {
 		max-width: 312px;
 	}
+	body > header > details ul {
+
+/*		top: -48px;*/
+	}
     body > nav > details > summary {
 		/*		display: none;*/
 		
@@ -295,13 +325,15 @@ list-style-type: "✕";
 		text-align:right;
 		background-color:initial;
 		
+
 	}
 	body > header {
 /*		height: 72px;*/
 	}
 body > aside > details > summary {
 	list-style-type: "<";
-	font-size:x-large;
+/*	font-size:x-large;*/
+	font-size:xx-large;
 }
 body > aside > details[open] summary {
 	list-style-type: ">";
@@ -329,9 +361,14 @@ list-style-type: "<";
 /*		padding-top: 16px;*/
 		top: initial;
 /*		border:2px solid red;*/
+top:-40px;
 	}
 	body > header > details[open] summary {
 /*		margin-top: 24px;*/
+top:-22px;
+	}
+	body > header > details ul {
+/*		top:-48px;*/
 	}
     body > nav .sign-in-item {
     	display:none;
