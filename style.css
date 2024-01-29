@@ -24,6 +24,10 @@ body > aside {
 body > aside > section {
     margin: 0px 12px 0px 12px;
 }
+body blockquote {
+	border-left: 4px solid rgba(41, 98, 255,0.2);
+	padding-left:24px;
+}
 body > footer {
 	overflow: hidden;  /* needed for scroll suppression */
 	min-width: 0;      /* needed for scroll suppression */
@@ -36,6 +40,12 @@ body > footer > section {
 }
 body > header {
 	grid-area: header;
+}
+body blockquote {
+	margin: 12px 6px;
+}
+body figure {
+	margin: 12px 6px;
 }
 body > header > details ul {
 	position: relative;
@@ -74,8 +84,9 @@ body > header figure {
 	display:inline-block;
 	text-decoration: none;
 	color: inherit;
-    max-width: 196px;
+/*    max-width: 196px;*/
     margin: 12px;
+    min-height: 56px;
 }
 body > header figure a {
     display: flex;
@@ -168,18 +179,30 @@ details ::marker {
 	body > aside > details[open] summary {
 		list-style-type: none;
 	}
+
+	body > header {
+/*		position: absolute;*/
+	}
+	body > header > details {
+		margin-top: -80px;
+	}
 	body > header > details > summary {
 		margin-right: 64px;
 	    top: -52px;
+	    margin-top: 72px;
 	}
 	body > header > details[open] > summary {
 	    top: -52px;
 	    margin-right: 64px;
+	    margin-top: 72px;
 	}
 	body > header > details ul {
-		top: -32px;
+/*		top: -32px;*/
 		justify-content: space-between;
 	}
+/*	body > main {
+		margin-top: 72px;
+	}*/
 	body > nav > details > summary {
 		list-style-type: "☰";
 	}
