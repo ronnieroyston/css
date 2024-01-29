@@ -1,6 +1,6 @@
 # The Cascading Style Sheets Collection
 
-The collection is made of pairings of HTML documents and accompanying Cascading Style Sheets.
+A collection of class free authored Cascading Style Sheets.
 
 ### Responsive View With Collapsible Sections
 
